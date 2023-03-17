@@ -24,7 +24,7 @@ Programe la función void arrayMaxMin(int *a, int n, int *max, int *min),
 la cual encuentra el máximo y el mínimo valor del arreglo a y los
 almacena en las variables apuntadas por max y min.
 */
-void arrayMaxMin(int *a, int n, int *max, int *min) {
+void arrayMaxMin(int *a, int n, int *max, int *min){
   *min=a[0];
   for(int i=1;i<n;i++){
     if(*min>a[i]){
@@ -53,7 +53,7 @@ typedef struct {
 } Persona;
 
 
-Persona* crearPersona(char nombre[], char rut[], int edad) {
+Persona* crearPersona(char nombre[], char rut[], int edad){
    Persona * p = (Persona *) malloc(sizeof(Persona));
    //asignar valores de entrada a los campos de p
    strcpy(p->nombre, nombre);
