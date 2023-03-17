@@ -12,7 +12,7 @@ Ejercicio 1.
 Programe la función void swap(int *a, int *b), la cual
 intercambia los valores de las variables apuntadas por a y b.
 */
-void swap(int *a, int *b) {
+void swap(int *a, int *b){
   int aux=*a;
   *a=*b;
   *b=aux;
@@ -56,9 +56,9 @@ typedef struct {
 Persona* crearPersona(char nombre[], char rut[], int edad) {
    Persona * p = (Persona *) malloc(sizeof(Persona));
    //asignar valores de entrada a los campos de p
-   strcpy(nuevaPersona->nombre, nombre);
-   strcpy(nuevaPersona->rut, rut);
-   nuevaPersona->edad = edad;
+   strcpy(p->nombre, nombre);
+   strcpy(p->rut, rut);
+   p->edad = edad;
 
    return p;
 }
@@ -77,8 +77,8 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n){
-  vector *vectorTmp=NULL;  //revisar por si sale mal aca
-  vectorTmp= (vector*) malloc(sizeof(vector)*n);
+  Vector *vectorTmp=NULL;  //revisar por si sale mal aca
+  vectorTmp= (Vector*) malloc(sizeof(Vector)*n);
   vectorTmp->datos = (int*) calloc(n, sizeof(int));
   vectorTmp->capacidad = n;
    return vectorTmp;
@@ -89,7 +89,7 @@ Ejercicio 5a.
 Programe la función void asignarValor(Vector * v, int i, int valor), 
 la cual asigna el valor a la posición i del vector v.
 */
-void asignarValor(Vector * v, int i, int valor) {
+void asignarValor(Vector * v, int i, int valor){
   v[i]=valor;
 }
 
@@ -98,7 +98,7 @@ Ejercicio 6.
 Programe la función int obtenerValor(Vector * v, int i), 
 la cual retorna el valor en la posición i del vector v.
 */
-int obtenerValor(Vector * v, int i) {
+int obtenerValor(Vector * v, int i){
    return v[i];
 }
 
@@ -108,7 +108,7 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-  for(int i=1;i)
+  for(int i=1;i<)
 }
 
 /*
