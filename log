@@ -328,3 +328,14 @@ Fri 17 Mar 2023 06:16:11 PM UTC:
  tests:  5|3
 total_score: 40/70
 469d9f2
+Fri 17 Mar 2023 08:03:50 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV’:
+exercises.c:115:6: error: assignment to ‘Vector *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  115 |     c=a->datos[i]+b->datos[i];
+      |      ^
+cc1: all warnings being treated as errors
+Compilation failed
+f8b5bd4
