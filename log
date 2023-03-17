@@ -339,3 +339,14 @@ exercises.c:115:6: error: assignment to ‘Vector *’ from ‘int’ makes poin
 cc1: all warnings being treated as errors
 Compilation failed
 f8b5bd4
+Fri 17 Mar 2023 08:05:47 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV’:
+exercises.c:115:11: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  115 |   c->datos=a->datos[i]+b->datos[i];
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+b2a5810
