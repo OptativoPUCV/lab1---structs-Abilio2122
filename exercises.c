@@ -13,7 +13,9 @@ Programe la función void swap(int *a, int *b), la cual
 intercambia los valores de las variables apuntadas por a y b.
 */
 void swap(int *a, int *b) {
-
+  int aux=*a;
+  *a=*b;
+  *b=aux;
 }
 
 /*
@@ -23,7 +25,17 @@ la cual encuentra el máximo y el mínimo valor del arreglo a y los
 almacena en las variables apuntadas por max y min.
 */
 void arrayMaxMin(int *a, int n, int *max, int *min) {
-    
+  *min=a[0];
+  for(int i=1;i<n;i++){
+    if(*min>a[i]){
+      *min=a[i];
+    }
+  *max=*min;
+  for(int i=1;i<n;i++){
+    if(*max<a[i]){
+      *max=a[i];
+    }
+  }
 }
 
 
@@ -44,7 +56,9 @@ typedef struct {
 Persona* crearPersona(char nombre[], char rut[], int edad) {
    Persona * p = (Persona *) malloc(sizeof(Persona));
    //asignar valores de entrada a los campos de p
-
+   strcpy(nuevaPersona->nombre, nombre);
+   strcpy(nuevaPersona->rut, rut);
+   nuevaPersona->edad = edad;
 
    return p;
 }
@@ -62,8 +76,12 @@ typedef struct {
    int capacidad; // capacidad del arreglo
 } Vector;
 
-Vector * crearVector(int n) {
-   return NULL;
+Vector * crearVector(int n){
+  vector *vectorTmp=NULL;  //revisar por si sale mal aca
+  vectorTmp= (vector*) malloc(sizeof(vector)*n);
+  vectorTmp->datos = (int*) calloc(n, sizeof(int));
+  vectorTmp->capacidad = n;
+   return vectorTmp;
 }
 
 /*
@@ -72,7 +90,7 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
-
+  v[i]=valor;
 }
 
 /*
@@ -81,7 +99,7 @@ Programe la función int obtenerValor(Vector * v, int i),
 la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
-   return 0;
+   return v[i];
 }
 
 /*
@@ -90,7 +108,7 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-
+  for(int i=1;i)
 }
 
 /*

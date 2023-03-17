@@ -2,3 +2,69 @@ Fri 17 Mar 2023 12:02:17 AM UTC:
  tests:  0|7
 total_score: 0/70
 4b0a64f
+Fri 17 Mar 2023 01:05:01 AM UTC: 
+ exercises.c | 32 +++++++++++++++++++++++++-------
+ 1 file changed, 25 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:59:11: error: ‘nuevaPersona’ undeclared (first use in this function); did you mean ‘crearPersona’?
+   59 |    strcpy(nuevaPersona->nombre, nombre);
+      |           ^~~~~~~~~~~~
+      |           crearPersona
+exercises.c:59:11: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: In function ‘crearVector’:
+exercises.c:80:3: error: unknown type name ‘vector’; did you mean ‘Vector’?
+   80 |   vector *vectorTmp=NULL;  //revisar por si sale mal aca
+      |   ^~~~~~
+      |   Vector
+exercises.c:81:15: error: ‘vector’ undeclared (first use in this function); did you mean ‘Vector’?
+   81 |   vectorTmp= (vector*) malloc(sizeof(vector)*n);
+      |               ^~~~~~
+      |               Vector
+exercises.c:81:22: error: expected expression before ‘)’ token
+   81 |   vectorTmp= (vector*) malloc(sizeof(vector)*n);
+      |                      ^
+exercises.c:82:12: error: request for member ‘datos’ in something not a structure or union
+   82 |   vectorTmp->datos = (int*) calloc(n, sizeof(int));
+      |            ^~
+exercises.c:83:12: error: request for member ‘capacidad’ in something not a structure or union
+   83 |   vectorTmp->capacidad = n;
+      |            ^~
+exercises.c:84:11: error: returning ‘int *’ from a function with incompatible return type ‘Vector *’ [-Werror=incompatible-pointer-types]
+   84 |    return vectorTmp;
+      |           ^~~~~~~~~
+exercises.c: In function ‘asignarValor’:
+exercises.c:93:8: error: incompatible types when assigning to type ‘Vector’ from type ‘int’
+   93 |   v[i]=valor;
+      |        ^~~~~
+exercises.c: In function ‘obtenerValor’:
+exercises.c:102:12: error: incompatible types when returning type ‘Vector’ but ‘int’ was expected
+  102 |    return v[i];
+      |           ~^~~
+exercises.c: In function ‘sumaV’:
+exercises.c:111:16: error: expected ‘;’ before ‘)’ token
+  111 |   for(int i=1;i)
+      |                ^
+      |                ;
+exercises.c:112:1: error: expected expression before ‘}’ token
+  112 | }
+      | ^
+test.c: In function ‘arrayMaxMin’:
+test.c:251:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  251 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:271:1: error: expected declaration or statement at end of input
+  271 | }
+      | ^
+In file included from test.c:5:
+exercises.c: In function ‘obtenerValor’:
+exercises.c:103:1: error: control reaches end of non-void function [-Werror=return-type]
+  103 | }
+      | ^
+At top level:
+test.c:251:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  251 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a0379a8
