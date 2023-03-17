@@ -30,6 +30,7 @@ void arrayMaxMin(int *a, int n, int *max, int *min){
     if(*min>a[i]){
       *min=a[i];
     }
+  }
   *max=*min;
   for(int i=1;i<n;i++){
     if(*max<a[i]){
@@ -37,7 +38,6 @@ void arrayMaxMin(int *a, int n, int *max, int *min){
     }
   }
 }
-
 
 /*
 Ejercicio 3.
